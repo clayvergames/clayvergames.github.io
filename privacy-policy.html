@@ -33,7 +33,7 @@
         line-height: 1.65;
       }
       main {
-        max-width: 720px;
+        max-width: 740px;
         margin: 0 auto;
         background: var(--card);
         border: 1.5px solid var(--border);
@@ -46,6 +46,7 @@
       .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 22px; }
       ul { padding-left: 20px; }
       a { color: var(--accent); }
+      code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9em; }
       footer { margin-top: 28px; padding-top: 16px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
     </style>
   </head>
@@ -57,66 +58,112 @@
       </p>
 
       <p>
-        Clayver Games ("we", "our", or "us") built <strong>Slaydoku</strong> (package ID
+        Clayver Games ("we", "our", or "us") built <strong>Slaydoku</strong> (Android package ID
         <code>com.slaydoku.pups</code>) as a cozy mobile logic puzzle game. This Privacy Policy explains
-        what information is stored, how third-party services operate, and how you control your data.
+        what information is stored on your device, how third-party services operate, and how you can manage
+        or delete your data.
       </p>
 
       <h2>1. Local Device Storage</h2>
       <p>
-        Your game progress—including campaign level, streaks, coins, unlocked pup breeds/avatars/frames,
-        your chosen display name, numeric Player ID, and accessibility/theme preferences—is stored locally
-        on your device. We do not require account registration, email addresses, passwords, or phone numbers
-        to play Slaydoku.
+        Your game progress—including campaign levels, streaks, coins, gems, unlocked pup breeds, avatars,
+        frames, your chosen display name, numeric Player ID, and accessibility or theme preferences—is stored
+        strictly locally on your device using browser <code>localStorage</code> and native Android
+        Preferences. We do not require account registration, email addresses, passwords, or phone numbers to
+        play Slaydoku.
       </p>
 
-      <h2>2. Optional Play With Friends (Firebase Realtime Database)</h2>
+      <h2>2. Play With Friends (Google Firebase Realtime Database)</h2>
       <p>
-        When you choose to host or join an online Play With Friends room, Slaydoku exchanges temporary room
-        state (6-character room code, chosen display name, board size, and live match progress/finish time)
-        through Google Firebase Realtime Database strictly to synchronize the active match between you and
-        your friend. Room records are ephemeral and contain no sensitive personal information.
-      </p>
-
-      <h2>3. Advertising (Google AdMob)</h2>
-      <p>
-        Slaydoku uses Google AdMob to display optional rewarded video ads (for extra rewards or retries) and
-        occasional interstitial ads between solo levels (unless you own the No-Ads Pack). Google Mobile Ads
-        SDK may collect device identifiers (such as the Android Advertising ID), IP address, and diagnostics
-        for ad delivery, frequency capping, fraud prevention, and—where permitted by your regional consent
-        settings—personalized advertising.
+        When you choose to host or join an online Play With Friends room, Slaydoku exchanges temporary match
+        state—consisting of a 6-character room code, chosen display name, board size, and live match progress
+        and solution proof—through Google Firebase Realtime Database strictly to synchronize the active match
+        between you and your friend. All network traffic is encrypted in transit via HTTPS/TLS, room records
+        contain no personal contact information, and rooms are cleared or overwritten after matches end.
       </p>
       <ul>
         <li>
-          Google Privacy &amp; Terms:
+          Firebase Privacy &amp; Security:
+          <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">
+            https://firebase.google.com/support/privacy
+          </a>
+        </li>
+      </ul>
+
+      <h2>3. Advertising (Google AdMob)</h2>
+      <p>
+        Slaydoku uses Google AdMob to display optional rewarded video ads (for optional bonus rewards or
+        retries) and occasional interstitial ads between solo levels (which may be reduced or removed by
+        optional ad-free features, where available). Google Mobile Ads SDK may collect and process the
+        following data categories for ad delivery, frequency capping, fraud prevention, and—where permitted
+        by your consent settings—personalized advertising:
+      </p>
+      <ul>
+        <li><strong>Approximate location</strong> (derived from your IP address)</li>
+        <li><strong>App interactions</strong> (such as ad impressions, views, and taps)</li>
+        <li><strong>Diagnostics</strong> (crash logs and performance telemetry)</li>
+        <li><strong>Device or other IDs</strong> (including the Android Advertising ID and App Set ID)</li>
+      </ul>
+      <ul>
+        <li>
+          Google Advertising Privacy &amp; Terms:
           <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">
             https://policies.google.com/technologies/ads
           </a>
         </li>
         <li>
-          You can reset or limit your Android Advertising ID at any time in your Android device under
-          <em>Settings → Privacy → Ads</em>.
+          <strong>In-App Consent Management:</strong> Where required by regional privacy laws (such as EEA/UK
+          GDPR or applicable US state privacy laws), you can review, manage, or withdraw your ad consent at
+          any time inside Slaydoku under <em>Settings → Privacy &amp; Ad Choices</em>.
+        </li>
+        <li>
+          <strong>Device-Level Ad Controls:</strong> You can reset or limit your Android Advertising ID at
+          any time in your Android device under <em>Settings → Privacy → Ads</em>.
         </li>
       </ul>
 
       <h2>4. Children's Privacy</h2>
       <p>
-        Slaydoku is designed for a general puzzle audience and does not knowingly collect personally
-        identifiable information from children under 13 (or the applicable digital consent age in your
-        region). All ad requests are configured with a General (<code>G</code>) maximum ad content rating.
-      </p>
-
-      <h2>5. Data Deletion &amp; Control</h2>
-      <p>
-        Because your game save lives locally on your device, you can permanently delete all Slaydoku save
-        data at any time by clearing the app's storage in Android
-        (<em>Settings → Apps → Slaydoku → Storage → Clear data</em>) or uninstalling the app.
-      </p>
-
-      <h2>6. Contact Us</h2>
-      <p>
-        If you have questions about this Privacy Policy, please contact Clayver Games at:
+        Slaydoku is intended for a general puzzle audience aged <strong>13 and older</strong> and is not
+        directed to children under 13 (or the applicable digital consent age in your region). We do not
+        knowingly collect personal information from children. All ad requests are configured with a
+        <strong>General (<code>G</code>)</strong> maximum ad content rating. If you are a parent or guardian
+        and believe a child has provided information, please contact us at
         <a href="mailto:clayvergames.support@gmail.com"><strong>clayvergames.support@gmail.com</strong></a>.
+      </p>
+
+      <h2>5. Data Retention, Security &amp; Deletion</h2>
+      <ul>
+        <li>
+          <strong>Security in Transit:</strong> All connections to Firebase Realtime Database and Google AdMob
+          are encrypted in transit using HTTPS/TLS.
+        </li>
+        <li>
+          <strong>Local Save Retention &amp; Deletion:</strong> Your local game save stays on your device
+          until you erase it. You can permanently delete all local Slaydoku save data at any time using
+          in-app <em>Settings → Reset Local Data</em>, via Android
+          (<em>Settings → Apps → Slaydoku → Storage → Clear data</em>), or by uninstalling the app.
+        </li>
+        <li>
+          <strong>Ephemeral Rooms &amp; AdMob Retention:</strong> Online Play With Friends room entries are
+          ephemeral and cleared or overwritten after matches end. Data processed by Google AdMob is retained
+          and managed in accordance with Google's privacy policies.
+        </li>
+      </ul>
+
+      <h2>6. Regional Rights, Grievance Contact &amp; Policy Changes</h2>
+      <p>
+        Depending on where you live (including the EEA/UK under GDPR, US states with consumer privacy laws,
+        and India under the Digital Personal Data Protection Act / DPDP), you may have rights to access,
+        delete, or withdraw consent regarding your data.
+      </p>
+      <p>
+        <strong>Privacy &amp; Grievance Contact:</strong> Clayver Games —
+        <a href="mailto:clayvergames.support@gmail.com"><strong>clayvergames.support@gmail.com</strong></a>.
+      </p>
+      <p>
+        <strong>Changes to This Policy:</strong> We may update this Privacy Policy from time to time as
+        Slaydoku evolves. Any updates will be published at this URL with an updated Effective Date.
       </p>
 
       <footer>
