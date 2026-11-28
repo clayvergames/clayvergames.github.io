@@ -1,8 +1,1 @@
-# Slaydoku (Clayver Games) — app-ads.txt
-# Host this file at the root of your developer website (e.g. https://yourdomain.com/app-ads.txt)
-# and link that exact website URL in Google Play Console -> Store Settings.
-#
-# BEFORE LAUNCH: Replace pub-0000000000000000 with your real AdMob Publisher ID
-# (found in AdMob Console -> Settings -> Account Information).
-
 google.com, pub-6570143379565318, DIRECT, f08c47fec0942fa0
